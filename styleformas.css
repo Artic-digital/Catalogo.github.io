@@ -1,0 +1,135 @@
+/* Reglas generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('images/FONDO.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--highlight-color);
+    text-shadow: 0 0 10px var(--highlight-color), 0 0 20px var(--highlight-color), 0 0 30px var(--highlight-color);
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-info picture img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.payment-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+#notify-btn {
+    margin-top: 20px;
+}
+
+/* Estilos de redes sociales */
+footer {
+    background-color: var(--secondary-color);
+    padding: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--highlight-color);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.social-icons a:hover img {
+    border-color: var(--text-color);
+    box-shadow: 0 0 15px var(--highlight-color);
+}
+
+/* Media queries para hacer la página completamente responsive */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .game-info picture img {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .payment-options {
+        flex-direction: column;
+    }
+
+    footer .social-icons {
+        margin-top: 20px;
+    }
+
+    footer .social-icons a {
+        margin: 10px;
+    }
+}
+
+/* Reglas para pantallas más grandes */
+@media (min-width: 769px) {
+    .payment-options {
+        justify-content: center;
+    }
+    
+    footer {
+        padding: 40px 0;
+    }
+}
