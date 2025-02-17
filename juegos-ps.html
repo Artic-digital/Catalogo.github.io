@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Juegos PS4 y PS5</title>
+    <style>
+        .games-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .game-card {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.507);
+            border-radius: 10px;
+            padding: 11px;
+            box-shadow: 0 0 15px rgb(0, 0, 0);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .pagination button {
+            margin: 0 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Artic Psn</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <div class="container">
+        <main>
+            <h1>Juegos PS4 y PS5</h1>
+            <section class="games-grid" id="games-grid"></section>
+            <div class="pagination">
+                <button id="prevPage" disabled>Anterior</button>
+                <span id="pageIndicator">Página 1</span>
+                <button id="nextPage">Siguiente</button>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const games = [
+                { name: "ARK Survival Ascended ", img: "images-febero30/ARK Survival Ascended.avif", price: "120000"  },
+                { name: "Arma Reforger", img: "images-febero30/Arma Reforger.avif", price: "124000" },
+                { name: "Call of Duty Black Ops 6 - Vault Edition", img: "images-febero30/Call of Duty Black Ops 6 - Vault Edition.avif", price:296000  },
+                { name: "Call of Duty® WWII - Gold Edition", img: "images-febero30/Call of Duty® WWII - Gold Edition.webp", price:69000  },
+                { name: "Cyberpunk 2077 Ultimate Edition (PS5)", img: "images-febero30/Cyberpunk 2077 Ultimate Edition (PS5).avif", price: 184000 },
+                { name: "DayZ", img: "images-febero30/Dayz.avif", price:120000  },
+                { name: "Diablo® IV - Expansion Bundle", img: "images-febero30/Diablo® IV - Expansion Bundle.avif", price: 164000 },
+                { name: "EA SPORTS™ Madden NFL 25 Deluxe Edition", img: "images-febero30/EA SPORTS™ Madden NFL 25 Deluxe Edition.avif", price: 120000 },
+                { name: "Gang Beasts", img: "images-febero30/Gang Beasts.webp", price:35000  },
+                { name: "Grand Theft Auto Online (PlayStation®5)", img: "images-febero30/Grand Theft Auto Online (PlayStation®5).avif", price:35000  },
+                { name: "Grand Theft Auto V (PS4™ & PS5™)Red Dead Redemption 2", img: "images-febero30/Grand Theft Auto V (PS4™ & PS5™).webp", price:69000  },
+                { name: "Hell Let Loose", img: "images-febero30/Hell Let Loose.avif", price:120000  },
+                { name: "Hogwarts Legacy Digital Deluxe Edition", img: "images-febero30/Hogwarts Legacy Digital Deluxe Edition.avif", price: 90000 },
+                { name: "Marvel’s Spider-Man 2 Digital Deluxe Edition", img: "images-febero30/Marvel’s Spider-Man 2 Digital Deluxe Edition.avif", price:196000  },
+                { name: "Mortal Kombat™ 1", img: "images-febero30/Mortal Kombat™ 1.avif", price: 69000 },
+                { name: "NBA 2K25 Standard Edition", img: "images-febero30/NBA 2K25 Standard Edition.avif", price: 90000 },
+                { name: "NBA 2K25 All-Star Edition", img: "images-febero30/NBA 2K25 All-Star Edition.avif", price: 136000 },
+                { name: "Raft", img: "images-febero30/Raft.avif", price:69000  },
+                { name: "Red Dead Redemption 2 Ultimate Edition",img:"images-febero30/Red Dead Redemption 2 Ultimate Edition.jpeg",price:"12000" },
+                { name: "Rise of the Ronin™",img:"images-febero30/Rise of the Ronin™.avif",price:"156000" },
+                { name: "Stellar Blade™ Digital Deluxe Edition",img:"images-febero30/Stellar Blade™ Digital Deluxe Edition.avif",price:"236000" },
+                { name: "UFC® 5 Ultimate Edition",img:"images-febero30/UFC® 5 Ultimate Edition.avif",price:"196000" },
+                { name: "Undisputed",img:"images-febero30/Undisputed.avif",price:"176000" },
+                { name: "Until Dawn™",img:"images-febero30/Until Dawn™.avif",price:"176000" },
+                { name: "Resident Evil 4",img:"images-febero30/Resident Evil 4.webp",price:"69000" },
+                { name: "Bully",img:"images-febero30/Bully.avif",price:"35000" },
+                { name: "Mortal Kombat X",img:"images-febero30/Mortal Kombat X.webp",price:"30000" },
+                { name: "SILENT HILL 2 Deluxe Edition",img:"images-febero30/SILENT HILL 2 Deluxe Edition.avif",price:"252000" },
+                { name: "NHL® 25 Deluxe Edition",img:"images-febero30/NHL® 25 Deluxe Edition.avif",price:"156000" },
+                { name: "Hollow Knight Voidheart Edition",img:"images-febero30/Hollow Knight Voidheart Edition.webp",price:"35000" },
+                { name: "Battlefield™ V",img:"images-febero30/Battlefield™ V.avif",price:"30000" },
+                { name: "RESIDENT EVIL 2 Deluxe Edition",img:"images-febero30/RESIDENT EVIL 2 Deluxe Edition.avif",price:"69000" },
+                { name: "Resident Evil Triple Pack",img:"images-febero30/Resident Evil Triple Pack.webp",price:"69000" },
+                { name: "RACCOON CITY EDITION",img:"images-febero30/RACCOON CITY EDITION.avif",price:"69000" },
+                { name: "SnowRunner",img:"images-febero30/SnowRunner.avif",price:"69000" },
+                { name: "Slime Rancher",img:"images-febero30/Slime Rancher.webp",price:"69000" },
+                { name: "FC 25",img:"images-febero/FC 25.avif",price:"120000" },
+                {name:"MADiSON",img:"images-febero30/MADiSON.avif",price:"90000" },
+                { name: "RIDE 5",img:"images-febero30/RIDE 5.avif",price:"120000" },
+                { name: "Watch Dogs™",img:"images-febero30/Watch Dogs™.webp",price:"30000" },
+                { name: "Heavy Rain",img:"images-febero30/Heavy Rain.webp",price:"30000" },
+                { name: "Call of Duty® Vanguard - Standard Edition",img:"images-febero30/Call of Duty® Vanguard - Standard Edition.avif",price:"90000" },
+                { name: "F1® 24 Champions Edition",img:"images-febero30/F1® 24 Champions Edition.avif",price:"69000" },
+                { name: "Liar's Pub",img:"images-febero30/Liar's Pub.avif",price:"30000" },
+                { name: "Max Payne®",img:"images-febero30/Max Payne®.webp",price:"30000" },
+             
+
+
+            ];
+            
+            const gamesPerPage = 15;
+            let currentPage = 1;
+            const totalPages = Math.ceil(games.length / gamesPerPage);
+            const gamesGrid = document.getElementById("games-grid");
+            const prevPageBtn = document.getElementById("prevPage");            
+            const nextPageBtn = document.getElementById("nextPage");
+            const pageIndicator = document.getElementById("pageIndicator");
+            
+            function renderGames(page) {
+                gamesGrid.innerHTML = "";
+                const start = (page - 1) * gamesPerPage;
+                const end = start + gamesPerPage;
+                const gamesToShow = games.slice(start, end);
+    
+                gamesToShow.forEach(game => {
+                    const gameCard = document.createElement("div");
+                    gameCard.classList.add("game-card");
+                    gameCard.innerHTML = `
+                        <img src="${game.img}" alt="${game.name}">
+                        <h3>${game.name}</h3>
+                        <p>Precio: ${game.price}</p>
+                        <a href="formas-de-pago.html?juego=${encodeURIComponent(game.name)}&precio=${game.price}&imagenUrl=${encodeURIComponent(game.img)}">
+                            <button>Comprar</button>
+                        </a>
+                    `;
+                    gamesGrid.appendChild(gameCard);
+                });
+    
+                pageIndicator.textContent = `Página ${currentPage}`;
+                prevPageBtn.disabled = currentPage === 1;
+                nextPageBtn.disabled = currentPage === totalPages;
+            }
+    
+            prevPageBtn.addEventListener("click", () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    renderGames(currentPage);
+                }
+            });
+    
+            nextPageBtn.addEventListener("click", () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    renderGames(currentPage);
+                }
+            });
+    
+            renderGames(currentPage);
+        });
+    </script>
+</body>
+</html>
