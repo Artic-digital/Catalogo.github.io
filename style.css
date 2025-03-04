@@ -257,7 +257,7 @@ footer::before {
 }
 p{
     color: rgb(0, 0, 0);
-    font-family: fantasy;
+    font-family: cursive;
 }
 
 @keyframes glitch {
