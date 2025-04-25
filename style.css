@@ -23,6 +23,13 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
+@media (max-width: 768px) {
+    .carousel-inner img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
 
 /* Títulos con animación */
 h1, h2, h3, h4, h5, h6 {
@@ -60,15 +67,19 @@ button:hover {
 }
 /* Footer ajustado con animación mejorada */
 footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
     background-color: var(--secondary-color);
+    padding: 20px;
     color: var(--text-color);
     text-align: center;
-    padding: 10px 0;
-    animation: fade-slide-up 2s ease-in-out, scale-up 2s ease-in-out;
-    z-index: 10;
+}
+
+.social-icons img {
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
 }
 
 .footer-text {
@@ -109,6 +120,8 @@ footer {
     }
 }
 
+
+
 /* Ofertas */
 .ofertas-container {
     display: flex;
@@ -140,10 +153,12 @@ footer {
     transform: scale(1.1);
 }
 
-.oferta-item:hover {
+.oferta-item img:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px var(--highlight-color);
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
+
 
 /* Descuento animado dentro de la imagen */
 .descuento-overlay {
