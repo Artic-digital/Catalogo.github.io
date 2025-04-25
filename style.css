@@ -50,8 +50,15 @@ button:hover {
     box-shadow: 0 0 10px var(--highlight-color-alt), 0 0 20px var(--highlight-color-alt);
     transform: scale(1.05);
 }
-
-/* Footer ajustado con animación */
+.platform {
+    height: 500px;
+}
+.platform img {
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+/* Footer ajustado con animación mejorada */
 footer {
     position: relative;
     bottom: 0;
@@ -60,7 +67,7 @@ footer {
     color: var(--text-color);
     text-align: center;
     padding: 10px 0;
-    animation: slide-up 2s ease-in-out;
+    animation: fade-slide-up 2s ease-in-out, scale-up 2s ease-in-out;
     z-index: 10;
 }
 
@@ -68,6 +75,38 @@ footer {
     font-family: 'Press Start 2P', cursive;
     color: var(--highlight-color);
     animation: blink 2s infinite;
+}
+
+/* Animación de deslizamiento y opacidad */
+@keyframes fade-slide-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación de escalado */
+@keyframes scale-up {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
 }
 
 /* Ofertas */
@@ -132,6 +171,11 @@ footer {
         font-size: 16px;
     }
 
+    .carousel-section img {
+        width: 100%;
+        height: auto;
+    }
+
     .ofertas-container {
         flex-direction: column;
         align-items: center;
@@ -140,11 +184,6 @@ footer {
     .oferta-item {
         width: 90%;
         height: auto;
-    }
-
-    button {
-        padding: 8px 15px;
-        font-size: 12px;
     }
 
     footer {
