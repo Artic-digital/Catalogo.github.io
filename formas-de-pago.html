@@ -25,7 +25,7 @@
     </header>
     <main>
         <div class="game-info">
-            <img id="game-image" alt="Juego seleccionado" width="200">
+            <img id="game-image" alt="Juego seleccionado" width="100" height="100">
             <h3 id="game-title"></h3>
             <p id="game-price"></p>
         </div>
@@ -54,41 +54,46 @@
         function getQueryParams() {
             const params = new URLSearchParams(window.location.search);
             return {
-                juego: params.get('juego'),
-                precio: params.get('precio'),
-                imagenUrl: params.get('imagenUrl')
+                juego: params.get('name'),  // Nombre del juego
+                precio: params.get('price'),  // Precio del juego
+                imagenUrl: params.get('img')  // URL de la imagen
             };
         }
-
+    
         const { juego, precio, imagenUrl } = getQueryParams();
-
+    
         // Mostrar datos del juego seleccionado
         const gameImageElement = document.getElementById('game-image');
         gameImageElement.src = imagenUrl;
-
+    
         document.getElementById('game-title').textContent = `Juego: ${juego}`;
-        document.getElementById('game-price').textContent = `Precio: ${precio}`;
-
+        document.getElementById('game-price').textContent = `Precio: $${precio}`;
+    
         // Variables para manejar la selección de método de pago
-        let selectedMethod = ""
-
+        let selectedMethod = "";
+    
         // Función para actualizar el método de pago
         function updatePaymentMethod(method) {
             selectedMethod = method;
             document.getElementById('payment-method').textContent = method;
-            document.getElementById('notify-btn').disabled = false; // Habilitar el botón de notificación
+            document.getElementById('notify-btn').disabled = false; // Habilitar el botón cuando se seleccione un método
         }
-
-        // Agregar eventos a los botones
-        document.getElementById('btn-nequi').addEventListener('click', () => updatePaymentMethod("Nequi"));
-        document.getElementById('btn-bancolombia').addEventListener('click', () => updatePaymentMethod("Bancolombia"));
-
-        // Función para enviar notificación a WhatsApp
-        document.getElementById('notify-btn').addEventListener('click', () => {
-            const mensaje = `Hola, quiero comprar el juego ${juego} utilizando ${selectedMethod}. Precio: ${precio}`;
-            const numeroWhatsApp = '3167773532';
-            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
+    
+        // Eventos de botones para seleccionar método de pago
+        document.getElementById('btn-nequi').addEventListener('click', function() {
+            updatePaymentMethod("Nequi");
+        });
+    
+        document.getElementById('btn-bancolombia').addEventListener('click', function() {
+            updatePaymentMethod("Bancolombia");
+        });
+    
+        // Función para notificar por WhatsApp
+        document.getElementById('notify-btn').addEventListener('click', function() {
+            const message = `¡Hola! Estoy interesado en comprar el juego ${juego} por un precio de $${precio}. Mi método de pago seleccionado es ${selectedMethod}.`;
+            const phoneNumber = "3167773532";  // Número de WhatsApp de la tienda
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, "_blank");
         });
     </script>
 </body>
