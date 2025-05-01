@@ -61,11 +61,10 @@
 </head>
 <body>
     <header>
-        <h1>Artic Psn</h1>
+        <h1>Artic Digital</h1>
         <nav>
             <ul class="nav-list">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="juegos.html">Juegos</a></li>
             </ul>
         </nav>
     </header>
@@ -89,82 +88,70 @@
             const games = [
 
             //primera pagina
-                { name: "ARK: Survival Ascension", img: "images-abril/ARK Survival Ascended.avif", price: "105000"  },
-                { name: "Assassin Creed: The Ezio Collection", img: "images-abril/assassin creed the ezio colecctions.webp", price: "65000" },
-                { name: "Assassin's Creed Valhalla + Odyssey + Origins", img: "images-abril/Assassin's creed Valhalla + odissey + origins.jpeg", price: "120000" },
-                { name: "Assassin's Creed Valhalla", img: "images-abril/Assassin's Creed Valhalla.avif", price: "69000" },
-                { name: "Assassin's Creed Mirage", img: "images-abril/Assassin's Creed® Mirage.webp", price: "75000" },
-                { name: "Assassin's Creed Odyssey", img: "images-abril/Assassin's Creed® Odyssey.webp", price: "60000" },
-                { name: "Assassin's Creed Origins", img: "images-abril/Assassin’s Creed® Origins.webp", price: "35000" },
-                { name: "Back 4 Blood", img: "images-abril/Back 4 Blood.jpeg", price: "35000" },
-                { name: "Batman Arkham Collection", img: "images-abril/Batman Arkham Collection.webp", price: "35000" },
-                { name: "Battlefield 1", img: "images-abril/Battlefield™ 1.avif", price: "25000" },
-                { name: "Battlefield V", img: "images-abril/Battlefield™ V.avif", price: "25000" },
-                { name: "Bully", img: "images-abril/Bully.avif", price: "35000" },
-                { name: "Call of Duty: Black Ops 6", img: "images-abril/Call of Duty® Black Ops 6.avif", price: "150000" },
-                { name: "Call of Duty: Infinite Warfare", img: "images-abril/Call of Duty® Infinite Warfare.avif", price: "75000" },
-                { name: "Call of Duty: WWII - Gold Edition", img: "images-abril/Call of Duty® WWII - Gold Edition.webp", price: "30000" },
+                { name: "Alan Wake 2", img: "images-abril30/Alan Wake 2.avif", price: "105.000"  },
+                { name: "Assassin's Creed Rogue Remastered", img: "images-abril30/Assassin's Creed Rogue Remastered.webp", price: "35.000"  },
+                { name: "Assassin’s Creed® Syndicate", img: "images-abril30/Assassin’s Creed® Syndicate.avif", price: "35.000"  },
+                { name: "Assassin’s Creed® The Ezio Collection", img: "images-abril30/Assassin’s Creed® The Ezio Collection.webp", price: "55.000"  },
+                { name: "Battlefield™ V", img: "images-abril30/Battlefield™ V.avif", price: " 35.000"  },
+                { name: "Blair Witch", img: "images-abril30/Blair Witch.jpeg", price: "35.000"  },
+                { name: "Call of Duty® Black Ops Cold War", img: "images-abril30/Call of Duty® Black Ops Cold War.webp", price: "79.900"  },
+                { name: "Call of Duty® Black Ops III Zombies Chronicles", img: "images-abril30/Call of Duty® Black Ops III Zombies Chronicles.webp", price: "69.900"  },
+                { name: "Call of Duty® Modern Warfare®", img: "images-abril30/Call of Duty® Modern Warfare®.webp", price: " 75.000"  },
+                { name: "Call of Duty® Vanguard", img: "images-abril30/Call of Duty® Vanguard.webp", price: "105.000"  },
+                { name: "Crash™ Team Racing Nitro-Fueled", img: "images-abril30/Crash™ Team Racing Nitro-Fueled.webp", price: "65.000"  },
+                { name: "Dead Island 2", img: "images-abril30/Dead Island 2.avif", price: "79.900"  },
+                { name: "Demon Slayer -Kimetsu no Yaiba- Sweep the Board!", img: "images-abril30/Demon Slayer -Kimetsu no Yaiba- Sweep the Board!.avif", price: "79.900"  },
+                { name: "Dying Light", img: "images-abril30/Dying Light.avif", price: "35.000"  },
+                { name: "Far Cry 6 Standard Edition PS4 & PS5", img: "images-abril30/Far Cry 6 Standard Edition PS4 & PS5.webp", price: "69.900S"  },
 
 
 
 
 
                 //segunda pagina
-                { name: "Crash Bandicoot 4: It's About Time", img: "images-abril/Crash Bandicoot™ 4 It’s About Time.jpeg", price:"750000" },
-                { name: "Cuphead & The Delicious Last Course", img: "images-abril/Cuphead & The Delicious Last Course.avif", price:"75000" },
-                { name: "Cyberpunk 2077", img: "images-abril/Cyberpunk 2077.webp", price:"95000" },
-                { name: "DayZ", img: "images-abril/DayZ.avif", price:"105000" },
-                { name: "EA SPORTS FC™ 25 Standard Edition PS4", img: "images-abril/EA SPORTS FC™ 25 Standard Edition PS4 & PS5.avif", price:"80000" },
-                { name: "EA SPORTS FC™ 25 Standard Edition PS5", img: "images-abril/EA SPORTS FC™ 25 Standard Edition PS4 & PS5.avif", price:"49000" },
-                { name: "ELDEN RING", img: "images-abril/ELDEN RING.webp", price:"135000" },
-                { name: "Far Cry 3", img: "images-abril/Far Cry® 3.avif", price:"35000" },
-                { name: "Five Nights at Freddy's Security Breach", img: "images-abril/Five Nights at Freddy's Security Breach.webp", price:"75000" },
-                { name: "God of War III Remastered", img: "images-abril/God of War III Remastered.avif", price:"69000" },
-                { name: "Grand Theft Auto The Trilogy – The Definitive Edition", img: "images-abril/Grand Theft Auto The Trilogy – The Definitive Edition.webp", price:"89000" },
-                { name: "Grand Theft Auto V", img: "images-abril/Grand Theft Auto V.avif", price:"65000" },
-                { name: "HITMAN World of Assassination", img: "images-abril/HITMAN World of Assassination.avif", price:"105000" },
-                { name: "Jurassic World Evolution 2", img: "images-abril/Jurassic World Evolution 2.jpeg", price:"35000" },
-                { name: "Mafia Trilogy", img: "images-abril/Mafia Trilogy.avif", price:"69000" },
+                { name: "Gang Beasts", img: "images-abril30/Gang Beasts.webp", price: "35.000"  },
+                { name: "Heavy Rain", img: "images-abril30/Heavy Rain.webp", price: "55.000"  },
+                { name: "Horizon Forbidden West™", img: "images-abril30/Horizon Forbidden West™.jpeg", price: "75.000"  },
+                { name: "It Takes Two PS4™ & PS5™", img: "images-abril30/It Takes Two PS4™ & PS5™.avif", price: "55.000"  },
+                { name: "Jurassic World Evolution 2", img: "images-abril30/Jurassic World Evolution 2.jpeg", price: "75.000"  },
+                { name: "Jurassic World Evolution", img: "images-abril30/Jurassic World Evolution.webp", price: "35.000"  },
+                { name: "Little Nightmares II", img: "images-abril30/Little Nightmares II.webp", price: "69.000"  },
+                { name: "Little Nightmares", img: "images-abril30/Little Nightmares.avif", price: "35.000"  },
+                { name: "Monster Hunter World™", img: "images-abril30/MONSTER HUNTER WORLD™.avif", price: "35.000"  },
+                { name: "Mortal Kombat™ 1 Khaos Reigns Kollection", img: "images-abril30/Mortal Kombat™ 1 Khaos Reigns Kollection.avif", price: "105.000"  },
+                { name: "Mortal Kombat 11", img: "images-abril30/Mortal Kombat 11.avif", price: "30.000"  },
+                { name: "Naruto Shippuden™ Ultimate Ninja® STORM 4", img: "images-abril30/NARUTO SHIPPUDEN™ Ultimate Ninja® STORM 4.avif", price: "35.000"  },
+                { name: "NBA 2K25 Standard Edition", img: "images-abril30/NBA 2K25 Standard Edition.avif", price: "55.000"  },
+                { name: "Need for Speed™ Hot Pursuit Remastered", img: "images-abril30/Need for Speed™ Hot Pursuit Remastered.webp", price: "35.000"  },
 
 
 
 
                 //tercera pagina
-                { name: "Marvel’s Spider-Man 2(PS5)", img: "images-abril/Marvel’s Spider-Man 2.avif", price:"145000" },
-                { name: "Metro Exodus Gold Edition", img: "images-abril/Metro Exodus Gold Edition.jpeg", price:"33000" },
-                { name: "Metro Saga Bundle", img: "images-abril/Metro Saga Bundle.webp", price:"35000" },
-                { name: "Modern Warfare 3", img: "images-abril/modern warfare 3.avif", price:"95000" },
-                { name: "Mortal Kombat™ 1", img: "images-abril/Mortal Kombat™ 1.avif", price:"70000" },
-                { name: "MotoGP™24", img: "images-abril/MotoGP™24.avif", price:"35000" },
-                { name: "NBA 2K25 Standard Edition", img: "images-abril/NBA 2K25 Standard Edition.avif", price:"75000" },
-                { name: "Need for Speed™ Heat", img: "images-abril/Need for Speed™ Heat.avif", price:"25000" },
-                { name: "Need for Speed™ Payback", img: "images-abril/Need for Speed™ Payback.webp", price:"33000" },
-                { name: "Need for Speed™ Rivals", img: "images-abril/Need for Speed™ Rivals.avif", price:"35000" },
-                { name: "PAYDAY 3", img: "images-abril/PAYDAY 3.avif", price:"75000" },
-                { name: "Red Dead Redemption 2", img: "images-abril/Red Dead Redemption 2.webp", price:"75000" },
-                { name: "Red Dead Redemption", img: "images-abril/Red Dead Redemption.avif", price:"110000  " },
-                { name: "Resident Evil 2 Y 3", img: "images-abril/Resident Evil 2 Y 3.avif", price:"75000" },
-                { name: "Resident Evil 4 5 6", img: "images-abril/Resident Evil 4 5 6.webp", price:"75000" },
+                { name: "Outlast Trinity", img: "images-abril30/Outlast Trinity.avif", price: "55.000"  },
+                { name: "Palworld", img: "images-abril30/Palworld.avif", price: "95.000"  },
+                { name: "RESIDENT EVIL 2", img: "images-abril30/RESIDENT EVIL 2.avif", price: "35.000"  },
+                { name: "RESIDENT EVIL 3", img: "images-abril30/RESIDENT EVIL 3.avif", price: "35.000"  },
+                { name: "Resident Evil Village PS4 & PS5", img: "images-abril30/Resident Evil Village PS4 & PS5.avif", price: "25.000"  },
+                { name: "Rise of the Tomb Raider 20 Year Celebration", img: "images-abril30/Rise of the Tomb Raider 20 Year Celebration.avif", price: "35.000"  },
+                { name: "Shadow of the Tomb Raider Definitive", img: "images-abril30/Shadow of the Tomb Raider Definitive.jpeg", price: ""  },
+                { name: "Silent Hill 2", img: "images-abril30/SILENT HILL 2.webp", price: "145.000"  },
+                { name: "Sniper Elite 5 PS4™ & PS5™", img: "images-abril30/Sniper Elite 5 PS4™ & PS5™.avif", price: "60.000"  },
+                { name: "Star Wars Jedi Fallen Order™", img: "images-abril30/STAR WARS Jedi Fallen Order™.webp", price: "55.000"  },
+                { name: "The Callisto Protocol™ PS5", img: "images-abril30/The Callisto Protocol™ PS5.webp", price: "79.900"  },
+                { name: "The Evil Within", img: "images-abril30/The Evil Within.jpeg", price: "35.000"  },
+                { name: "The KING OF FIGHTERS XV Deluxe Edition PS4 & PS5", img: "images-abril30/THE KING OF FIGHTERS XV Deluxe Edition PS4 & PS5.jpeg", price: "35.000"  },
+                { name: "Truck Driver", img: "images-abril30/Truck Driver.avif", price: "75.000"  },
+                { name: "UFC® 5", img: "images-abril30/UFC® 5.avif", price: "105.000"  },
 
 
 
 
                                 //cuarta pagina
-                { name: "Resident Evil 4", img: "images-abril/Resident Evil 4.webp", price:"75000" },
-                { name: "Resident Evil Village", img: "images-abril/Resident Evil Village.avif", price:"75000" },
-                { name: "RIDE 5", img: "images-abril/RIDE 5.avif", price:"50000" },
-                { name: "Riders Republic™ PS4 & PS5", img: "images-abril/Riders Republic™ PS4 & PS5.webp", price:"35000" },
-                { name: "Sniper Ghost Warrior Contracts", img: "images-abril/Sniper Ghost Warrior Contracts.webp", price:"35000" },
-                { name: "STAR WARS Jedi Fallen Order", img: "images-abril/STAR WARS Jedi Fallen Order.webp", price:"35000" },
-                { name: "TEKKEN 7", img: "images-abril/TEKKEN 7.webp", price:"69000" },
-                { name: "The Crew Motorfest", img: "images-abril/The Crew Motorfest.avif", price:"75000" },
-                { name: "The Evil Within 2", img: "images-abril/The Evil Within 2.avif", price:"35000" },
-                { name: "The Last of Us 2 Remake PS5", img: "images-abril/the last of us 2 remake PS5.avif", price:"120000" },
-                { name: "The Quarry", img: "images-abril/The Quarry.webp", price:"35000" },
-                { name: "Watch Dogs® Legion", img: "images-abril/Watch Dogs® Legion.avif", price:"192000" },
-          
-             
-            ];
+                { name: "Uncharted 4", img: "images-abril30/UNCHARTED 4.jpeg", price: "65.000"  },
+                { name: "Uncharted Legacy of Thieves Collection", img: "images-abril30/UNCHARTED Legacy of Thieves Collection.jpeg", price: "75.000"  }
+        
+                ];
             
             const gamesPerPage = 15;
             let currentPage = 1;
