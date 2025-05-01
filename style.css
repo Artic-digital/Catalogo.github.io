@@ -13,8 +13,7 @@
 body {
     margin: 0;
     font: oblique bold 120% cursive;
-    background-image: url('images/FONDOO.jpeg');
-    background-repeat: no-repeat;
+background-image: url('/images/FONDOO.jpeg');    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
