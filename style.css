@@ -38,6 +38,10 @@ header {
     box-shadow: 0 0 20px var(--color-fucsia);
 }
 
+a{
+    font-family: 'Press Start 2P', cursive;
+}
+
 header h1 {
     font-size: 40px;
     color: #fff;
