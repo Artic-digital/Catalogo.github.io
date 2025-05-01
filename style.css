@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 :root {
     --color-azul: #0ff; /* Azul neón */
@@ -12,7 +11,7 @@
 
 body {
     margin: 0;
-    font: oblique bold 120% cursive;
+    font-family: 'Press Start 2P', cursive;
     background-image: url('images/FONDOO.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,7 +54,8 @@ nav ul {
 
 nav ul li a {
     color: var(--texto);
-    font: oblique bold 120% cursive;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
     text-shadow: 0 0 5px var(--color-verde);
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -81,7 +81,7 @@ a:hover {
 }
 
 button {
-    font: oblique bold 120% cursive;
+    font-family: 'Press Start 2P', cursive;
     background: var(--degradado);
     color: white;
     border: 2px solid #fff;
@@ -98,9 +98,10 @@ button:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px var(--color-fucsia);
 }
+
 p {
     font-size: 18px;
-    color: var(-black-);
+    color: #fff;
     text-shadow: 0 0 5px var(--color-verde), 0 0 10px var(--color-fucsia);
 }
 
@@ -128,7 +129,7 @@ p {
 .sidebar a {
     color: #fff;
     margin: 15px 0;
-    font: oblique bold 120% cursive;
+    font-family: 'Press Start 2P', cursive;
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s ease, text-shadow 0.3s ease;
@@ -177,124 +178,7 @@ p {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-  }
 
-  h1, h4, .footer-text {
-    font-family: 'Press Start 2P', cursive;
-    color: #c50087;
-    text-align: center;
-    font-size: 16px;
-    margin: 20px 0;
-  }
-
-  nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
-  }
-
-  nav a {
-    color: #c50087;
-    text-decoration: none;
-  }
-
-  .carousel-inner img {
-    transition: transform 0.5s ease;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .carousel-item:hover img {
-    transform: scale(1.03);
-  }
-
-  .oferta-item {
-    animation: zoomIn 1s ease-in;
-  }
-
-  @keyframes zoomIn {
-    from {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  .btn-destacado {
-    background: linear-gradient(to right, #00ff9f, #c50087);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 12px;
-    font-size: 14px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Press Start 2P', cursive;
-  }
-
-  .btn-destacado:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px #c50087;
-  }
-
-  .footer-text {
-    margin-top: 40px;
-  }
-
-  .social-icons img {
-    margin: 10px;
-    border-radius: 10px;
-  }
-
-  .ofertas-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .oferta-item img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #c50087;
-    border-radius: 10px;
-  }
-
-  .descuento-overlay {
-    text-align: center;
-    margin-top: 10px;
-    color: #104d15;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 12px;
-  }
-
-  @media screen and (max-width: 768px) {
-    h1, h4 {
-      font-size: 12px;
-    }
-
-    .btn-destacado {
-      font-size: 10px;
-      padding: 8px 12px;
-    }
-
-    nav ul {
-      flex-direction: column;
-      gap: 10px;
-    }
-  }
 .oferta-item:hover {
     transform: scale(1.07);
     box-shadow: 0 0 30px var(--color-verde);
@@ -309,7 +193,7 @@ body {
     font-size: 18px;
     padding: 10px 20px;
     border-radius: 8px;
-    font: oblique bold 120% cursive;
+    font-family: 'Press Start 2P', cursive;
 }
 
 footer {
@@ -318,6 +202,7 @@ footer {
     color: var(--texto);
     border-top: 3px solid var(--color-verde);
     box-shadow: 0 -5px 20px var(--color-fucsia);
+    text-align: center;
 }
 
 .footer-text {
@@ -331,6 +216,7 @@ footer {
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 #particles-js {
     position: fixed;
     width: 100%;
@@ -340,13 +226,12 @@ footer {
     z-index: -1;
 }
 
-
 .social-icons img:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px var(--color-azul);
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     body {
         font-size: 16px;
     }
