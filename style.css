@@ -13,7 +13,7 @@
 body {
     margin: 0;
     font: oblique bold 120% cursive;
-    background-image: url('/images/FONDOO.jpeg');   
+    background-image: url('images/FONDOO.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -177,7 +177,124 @@ p {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
 
+  h1, h4, .footer-text {
+    font-family: 'Press Start 2P', cursive;
+    color: #c50087;
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+  }
+
+  nav a {
+    color: #c50087;
+    text-decoration: none;
+  }
+
+  .carousel-inner img {
+    transition: transform 0.5s ease;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .carousel-item:hover img {
+    transform: scale(1.03);
+  }
+
+  .oferta-item {
+    animation: zoomIn 1s ease-in;
+  }
+
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .btn-destacado {
+    background: linear-gradient(to right, #00ff9f, #c50087);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .btn-destacado:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #c50087;
+  }
+
+  .footer-text {
+    margin-top: 40px;
+  }
+
+  .social-icons img {
+    margin: 10px;
+    border-radius: 10px;
+  }
+
+  .ofertas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .oferta-item img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #c50087;
+    border-radius: 10px;
+  }
+
+  .descuento-overlay {
+    text-align: center;
+    margin-top: 10px;
+    color: #104d15;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 768px) {
+    h1, h4 {
+      font-size: 12px;
+    }
+
+    .btn-destacado {
+      font-size: 10px;
+      padding: 8px 12px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
 .oferta-item:hover {
     transform: scale(1.07);
     box-shadow: 0 0 30px var(--color-verde);
