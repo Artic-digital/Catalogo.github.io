@@ -1,123 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="Last-Modified" content="0" />
-    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <title>Artic Digital</title>
-  
-    <!-- Fuente cursiva personalizada -->
-    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css" />
-  
-    <style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Last-Modified" content="0" />
+  <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>Artic Digital</title>
+
+  <!-- Fuente Gamer -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap y CSS principal -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    h1, h4, .footer-text {
+      font-family: 'Press Start 2P', cursive;
+      color: #c50087;
+      text-align: center;
+      font-size: 16px;
+      margin: 20px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+    }
+
+    nav a {
+      color: #c50087;
+      text-decoration: none;
+    }
+
+    .carousel-inner img {
+      transition: transform 0.5s ease;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .carousel-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .oferta-item {
+      animation: zoomIn 1s ease-in;
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .btn-destacado {
+      background: linear-gradient(to right, #00ff9f, #c50087);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    .btn-destacado:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #c50087;
+    }
+
+    .footer-text {
+      margin-top: 40px;
+    }
+
+    .social-icons img {
+      margin: 10px;
+      border-radius: 10px;
+    }
+
+    .ofertas-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .oferta-item img {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #c50087;
+      border-radius: 10px;
+    }
+
+    .descuento-overlay {
+      text-align: center;
+      margin-top: 10px;
+      color: #104d15;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 768px) {
       h1, h4 {
-        animation: fadeInDown 1s ease-out;
-        font-family: 'Allura', cursive;
-        font-style: oblique;
-        font-weight: bold;
-        font-size: 120%;
+        font-size: 12px;
       }
-  
-      .footer-text {
-        font-family: 'Allura', cursive;
-        font-style: oblique;
-        font-weight: bold;
-        font-size: 120%;
-      }
-  
-      .carousel-inner img {
-        transition: transform 0.5s ease;
-      }
-  
-      .carousel-item:hover img {
-        transform: scale(1.03);
-      }
-  
-      .oferta-item {
-        animation: zoomIn 1s ease-in;
-      }
-  
-      @keyframes fadeInDown {
-        from {
-          opacity: 0;
-          transform: translateY(-30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-  
-      @keyframes zoomIn {
-        from {
-          opacity: 0;
-          transform: scale(0.8);
-        }
-        to {
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-  
+
       .btn-destacado {
-        background: linear-gradient(to right, #00ff9f, #c50087);
-        color: white;
-        padding: 10px 20px;
-        border-radius: 12px;
-        font-size: 18px;
-        text-decoration: none;
-        display: inline-block;
-        margin-top: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-size: 10px;
+        padding: 8px 12px;
       }
-  
-      .btn-destacado:hover {
-        transform: scale(1.1);
-        box-shadow: 0 0 20px #c50087;
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
       }
-  
-      #particles-js {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-      }
-    </style>
-  </head>
+    }
+  </style>
+</head>
 
 <body>
-  <!-- Partículas -->
-  <div id="particles-js"></div>
-
   <header>
     <h1>Artic Digital</h1>
     <nav>
       <ul class="nav-list">
         <li><a href="index.html">Inicio</a></li>
-        <li class="dropdown">
-          <div class="dropdown-content">
-            <a href="juegos-ps.html">Juegos PS</a>
-          </div>
-        </li>
+        <li><a href="juegos-ps.html">Juegos PS</a></li>
       </ul>
     </nav>
   </header>
 
-
-
-  <main>
+  <main class="container mt-4">
     <h1>El mejor lugar para comprar tus juegos digitales</h1>
     <h4>Nuestros Mejores Juegos en Promoción</h4>
 
+    <!-- Carrusel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -126,28 +162,28 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active text-center">
-          <img src="images-abril/DayZ.avif" class="d-block w-60 mx-auto" alt="DayZ" width="500" height="400" />
+          <img src="images-abril/DayZ.avif" alt="DayZ" />
         </div>
         <div class="carousel-item text-center">
-          <img src="images-abril/God of War III Remastered.avif" class="d-block w-60 mx-auto" alt="God of War III" width="500" height="400" />
+          <img src="images-abril/God of War III Remastered.avif" alt="God of War III" />
         </div>
         <div class="carousel-item text-center">
-          <img src="images-abril/EA SPORTS FC™ 25 Standard Edition PS4 & PS5.avif" class="d-block w-60 mx-auto" alt="EA Sports FC" width="500" height="400" />
+          <img src="images-abril/EA SPORTS FC™ 25 Standard Edition PS4 & PS5.avif" alt="EA Sports FC" />
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="carousel-control-prev-icon"></span>
         <span class="sr-only">Anterior</span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="carousel-control-next-icon"></span>
         <span class="sr-only">Siguiente</span>
       </a>
     </div>
 
-    <section class="ofertas zoom-in-section">
+    <!-- Ofertas -->
+    <section class="ofertas mt-4">
       <h1>No te pierdas nuestras ofertas</h1>
-
       <div class="ofertas-container">
         <div class="oferta-item">
           <img src="images-abril/Grand Theft Auto The Trilogy – The Definitive Edition.webp" alt="GTA Trilogy" onclick="window.location.href='juegos.html'" />
@@ -158,63 +194,19 @@
           <div class="descuento-overlay">50% de descuento</div>
         </div>
       </div>
-
-      <!-- Botón destacado -->
     </section>
   </main>
 
-  <footer>
+  <footer class="text-center">
     <p class="footer-text">Artic Digital</p>
     <div class="social-icons">
-      <a href="https://wa.me/3167773532" target="_blank">
-        <img src="img/WhatsApp neon logo.jpeg" alt="WhatsApp" width="40" />
-      </a>
-      <a href="https://www.instagram.com/psn.artic.digital/" target="_blank">
-        <img src="img/6fb329e7-6382-41bd-bc3d-faef1e7fe07c.jpeg" alt="Instagram" width="40" />
-      </a>
-      <a href="#" target="_blank">
-        <img src="img/TikTok overtakes Facebook downloads.jpeg" alt="TikTok" width="40" />
-      </a>
+      <a href="https://wa.me/3167773532" target="_blank"><img src="img/WhatsApp neon logo.jpeg" alt="WhatsApp" width="40" /></a>
+      <a href="https://www.instagram.com/psn.artic.digital/" target="_blank"><img src="img/6fb329e7-6382-41bd-bc3d-faef1e7fe07c.jpeg" alt="Instagram" width="40" /></a>
+      <a href="#"><img src="img/TikTok overtakes Facebook downloads.jpeg" alt="TikTok" width="40" /></a>
     </div>
   </footer>
 
-  <!-- Partículas -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS('particles-js', {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: ["#00ff9f", "#c50087", "#0ff"] },
-        shape: { type: "circle" },
-        opacity: { value: 0.5 },
-        size: { value: 3 },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#00ff9f",
-          opacity: 0.4,
-          width: 1,
-        },
-        move: { enable: true, speed: 2 },
-      },
-      interactivity: {
-        events: {
-          onhover: { enable: true, mode: "grab" },
-        },
-      },
-      retina_detect: true,
-    });
-  </script>
-
-  <!-- Sonido gamer de fondo (opcional) -->
-  <!--
-  <audio autoplay loop>
-    <source src="assets/fondo-gamer.mp3" type="audio/mpeg" />
-    Tu navegador no soporta audio HTML5.
-  </audio>
-  -->
-
-  <!-- Bootstrap JS -->
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
