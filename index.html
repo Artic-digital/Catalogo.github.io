@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Last-Modified" content="0" />
+  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>Artic Digital</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    h1, h4 {
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .carousel-inner img {
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-item:hover img {
+      transform: scale(1.03);
+    }
+
+    .oferta-item {
+      animation: zoomIn 1s ease-in;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .btn-destacado {
+      background: linear-gradient(to right, #00ff9f, #c50087);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 18px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-destacado:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #c50087;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Partículas -->
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>Artic Digital</h1>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="dropdown">
+          <div class="dropdown-content">
+            <a href="juegos-ps.html">Juegos PS</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <main>
+    <h1>El mejor lugar para comprar tus juegos digitales</h1>
+    <h4>Nuestros Mejores Juegos en Promoción</h4>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+          <img src="images-abril/DayZ.avif" class="d-block w-60 mx-auto" alt="DayZ" width="500" height="400" />
+        </div>
+        <div class="carousel-item text-center">
+          <img src="images-abril/God of War III Remastered.avif" class="d-block w-60 mx-auto" alt="God of War III" width="500" height="400" />
+        </div>
+        <div class="carousel-item text-center">
+          <img src="images-abril/EA SPORTS FC™ 25 Standard Edition PS4 & PS5.avif" class="d-block w-60 mx-auto" alt="EA Sports FC" width="500" height="400" />
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+
+    <section class="ofertas zoom-in-section">
+      <h1>No te pierdas nuestras ofertas</h1>
+
+      <div class="ofertas-container">
+        <div class="oferta-item">
+          <img src="images-abril/Grand Theft Auto The Trilogy – The Definitive Edition.webp" alt="GTA Trilogy" onclick="window.location.href='juegos.html'" />
+          <div class="descuento-overlay">60% de descuento</div>
+        </div>
+        <div class="oferta-item">
+          <img src="images-abril/HITMAN World of Assassination.avif" alt="Hitman" onclick="window.location.href='juegos.html'" />
+          <div class="descuento-overlay">50% de descuento</div>
+        </div>
+      </div>
+
+      <!-- Botón destacado -->
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-text">Artic Digital</p>
+    <div class="social-icons">
+      <a href="https://wa.me/3167773532" target="_blank">
+        <img src="img/WhatsApp neon logo.jpeg" alt="WhatsApp" width="40" />
+      </a>
+      <a href="https://www.instagram.com/psn.artic.digital/" target="_blank">
+        <img src="img/6fb329e7-6382-41bd-bc3d-faef1e7fe07c.jpeg" alt="Instagram" width="40" />
+      </a>
+      <a href="#" target="_blank">
+        <img src="img/TikTok overtakes Facebook downloads.jpeg" alt="TikTok" width="40" />
+      </a>
+    </div>
+  </footer>
+
+  <!-- Partículas -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: ["#00ff9f", "#c50087", "#0ff"] },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ff9f",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: { enable: true, speed: 2 },
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "grab" },
+        },
+      },
+      retina_detect: true,
+    });
+  </script>
+
+  <!-- Sonido gamer de fondo (opcional) -->
+  <!--
+  <audio autoplay loop>
+    <source src="assets/fondo-gamer.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
