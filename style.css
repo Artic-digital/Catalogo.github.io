@@ -2,11 +2,11 @@
 
 :root {
     --color-azul: #0ff; /* Azul neón */
-    --color-verde: #006f4f; /* Verde oscuro */
+    --color-verde: #0d880d; /* Verde oscuro */
     --color-fucsia: #c50087; /* Fucsia oscuro */
     --texto: #ffffff;
     --overlay-bg: rgba(0, 0, 0, 0.7);
-    --degradado: linear-gradient(135deg, #101d1d4b, #003110);
+    --degradado: linear-gradient(135deg, #101d1d4b, #248b4b);
 }
 
 body {
